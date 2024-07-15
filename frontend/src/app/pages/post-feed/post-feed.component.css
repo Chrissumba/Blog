@@ -1,0 +1,38 @@
+#post-button, .symbol {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    z-index: 10; /* Ensure the button and symbols stay on top */
+}
+
+.symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Example background color */
+    border-radius: 50%;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-bottom: 10px; /* Spacing between symbols */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Example shadow */
+}
+
+.symbol mat-icon {
+    font-size: 24px; /* Adjust icon size */
+}
+
+.symbol span {
+    margin-left: 5px; /* Adjust spacing between icon and text */
+    font-weight: bold;
+}
+
+#ai-symbol {
+    background-color: #ff9800; /* Example color for AI symbol */
+    bottom: 5em; /* Adjust vertical position */
+}
+
+#polls-symbol {
+    background-color: #2196f3; /* Example color for Polls symbol */
+    bottom: 8em; /* Adjust vertical position */
+}
