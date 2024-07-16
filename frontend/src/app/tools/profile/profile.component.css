@@ -7,6 +7,7 @@
     z-index: 9;
     transition-duration: .5s;
     overflow: hidden;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,35 +31,13 @@
 }
 
 input, textarea {
-    width: calc(100% - 2em); /* Adjusted width to accommodate padding */
+    width: 100%;
     padding: 1em;
     border-radius: 1em;
     margin-bottom: .5em;
     resize: none;
     outline: none;
     border: 1px solid gray;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
-input[type="file"] {
-    width: calc(100% - 2em); /* Adjusted width to accommodate padding */
-    padding: 1em;
-    margin-top: .5em;
-    margin-bottom: .5em;
-    outline: none;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-
-button {
-    width: 100%;
-    padding: 1em;
-    border-radius: 1em;
-    margin-top: .5em;
-    cursor: pointer;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

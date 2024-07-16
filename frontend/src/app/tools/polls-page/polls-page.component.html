@@ -1,1 +1,19 @@
-<p>polls-page works!</p>
+<div class="polls-page">
+    <h1>Polls</h1>
+    <div *ngFor="let poll of polls" class="poll">
+        <h2>{{ poll.question }}</h2>
+        <div *ngFor="let option of poll.options" class="poll-option">
+            <label>
+                <input type="radio" name="poll-{{ poll.id }}" (click)="vote(poll.id, option)" [disabled]="poll.voted"/>
+                {{ option }}
+            </label>
+        </div>
+        <button *ngIf="!poll.voted" (click)="submitVote(poll.id)" class="submit-button">Submit Vote</button>
+        <div *ngIf="poll.voted" class="results">
+            <p>Thank you for voting!</p>
+            <div *ngFor="let option of poll.options" class="poll-results">
+                {{ option }}: {{ getVotes(poll.id, option) }} votes
+            </div>
+        </div>
+    </div>
+</div>

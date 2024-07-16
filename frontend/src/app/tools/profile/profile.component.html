@@ -2,10 +2,6 @@
     <div id="profile-content">
         <input #nameInput placeholder="Name">
         <textarea #descriptionInput placeholder="Description"></textarea>
-        
-        <!-- Profile Picture Input -->
-        <input type="file" accept="image/*" (change)="onFileSelected($event)" style="margin-top: 10px;">
-        
         <button (click)="onContinueClick(nameInput, descriptionInput)" mat-flat-button color="warn">Continue</button>
     </div>
 </div>

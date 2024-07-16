@@ -1,19 +1,8 @@
 <div id="post-feed">
-    <!-- AI Symbol -->
-    <div class="symbol" id="ai-symbol" (click)="navigateToAIPage()">
-        <mat-icon>lightbulb_outline</mat-icon>
-        <span>AI</span>
-    </div>
-
-    <!-- Polls Symbol -->
-    <div class="symbol" id="polls-symbol" (click)="navigateToPollsPage()">
-        <mat-icon>poll</mat-icon>
-        <span>Polls</span>
-    </div>
-
-    <button (click)="onCreatePostClick()" mat-fab color="warn" id="post-button">
-        <mat-icon>add</mat-icon>
-    </button>
-
     <app-post *ngFor="let post of posts" [postData]="post"></app-post>
 </div>
+
+<button (click)="navigateTo('ai-page')" mat-fab color="warn" id="ai-button"><mat-icon>smart_toy</mat-icon></button>
+<button (click)="navigateTo('polls-page')" mat-fab color="warn" id="polls-button"><mat-icon>poll</mat-icon></button>
+
+<button (click)="onCreatePostClick()" mat-fab color="warn" id="post-button"><mat-icon>add</mat-icon></button>

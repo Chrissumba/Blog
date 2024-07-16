@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router'; // Import Router for navigation
+import { Router } from '@angular/router';
 import { CreatePostComponent } from 'src/app/tools/create-post/create-post.component';
 import { FirebaseTSFirestore, Limit, OrderBy } from 'firebasets/firebasetsFirestore/firebaseTSFirestore';
 
@@ -19,11 +19,11 @@ export class PostFeedComponent implements OnInit {
     this.getPosts();
   }
 
-  onCreatePostClick() {
+  onCreatePostClick(): void {
     this.dialog.open(CreatePostComponent);
   }
 
-  getPosts() {
+  getPosts(): void {
     this.firestore.getCollection({
       path: ["Posts"],
       where: [
@@ -38,17 +38,13 @@ export class PostFeedComponent implements OnInit {
         });
       },
       onFail: err => {
-        console.error('Failed to fetch posts:', err);
+        console.error(err);
       }
     });
   }
 
-  navigateToAIPage() {
-    this.router.navigate(['/ai-page']);
-  }
-
-  navigateToPollsPage() {
-    this.router.navigate(['/polls-page']);
+  navigateTo(page: string): void {
+    this.router.navigate([`/${page}`]);
   }
 }
 

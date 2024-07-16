@@ -20,7 +20,7 @@ import { PostComponent } from './tools/post/post.component';
 import { ReplyComponent } from './tools/reply/reply.component';
 import { AiPageComponent } from './tools/ai-page/ai-page.component';
 import { PollsPageComponent } from './tools/polls-page/polls-page.component';
-
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { PollsPageComponent } from './tools/polls-page/polls-page.component';
     MatBottomSheetModule,
     MatCardModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule // Add FormsModule to imports array
   ],
   providers: [],
   bootstrap: [AppComponent]

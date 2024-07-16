@@ -1,4 +1,11 @@
-<div class="ai-page">
-    <h1>AI Page</h1>
-    <!-- Add your AI-related content here -->
+<div class="chat-container">
+  <div class="chat-box">
+    <div *ngFor="let message of messages" class="message" [ngClass]="{'user-message': message.sender === 'user', 'ai-message': message.sender === 'ai'}">
+      <div class="message-text">{{ message.text }}</div>
+    </div>
+  </div>
+  <div class="input-box">
+    <input [(ngModel)]="userInput" (keyup.enter)="sendMessage()" placeholder="Type your message here..." />
+    <button (click)="sendMessage()">Send</button>
+  </div>
 </div>

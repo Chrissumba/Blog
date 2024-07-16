@@ -1,0 +1,18 @@
+USE posts;
+GO
+
+CREATE TABLE users (
+    ID INT PRIMARY KEY IDENTITY(1,1),
+    Name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    Password VARCHAR(100) NOT NULL
+);
+GO
+
+
+
+
+
+
+
+
